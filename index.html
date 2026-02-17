@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>💍 나랑 결혼해줄래?</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 15px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin: 10px;
+      transition: 0.3s;
+    }
+
+    #yes {
+      background-color: #ff4d6d;
+      color: white;
+    }
+
+    #no {
+      background-color: #ccc;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>💍 나랑 결혼해줄래? 💕</h1>
+  <button id="yes" onclick="yesClick()">응 ❤️</button>
+  <button id="no" onmouseover="moveNo()">싫어 😝</button>
+</div>
+
+<script>
+  function yesClick() {
+    document.body.innerHTML = "<h1 style='font-size:40px; color:white;'>역시 내 여자지 ❤️ 사랑해 😘</h1>";
+    document.body.style.background = "#ff4d6d";
+  }
+
+  function moveNo() {
+    const noBtn = document.getElementById("no");
+    const x = Math.random() * window.innerWidth;
+    const y = Math.random() * window.innerHeight;
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+  }
+</script>
+
+</body>
+</html>
